@@ -1,9 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 
 <style>
+
+#site_layout{
+	margin: -8px;
+	padding : 0;
+}
+
 #top_menu_wrapper{
 	margin:0 auto;
 	
@@ -50,11 +56,17 @@
 	
 }
 
+#sign_up{
+	background:#f30;
+	
+}
+
 .top_text2{
 	font-size: 15px;
 	color: white;
 	vertical-align:-2px;
 	text-decoration:none;
+	padding-right:15px;
 	
 }
 
@@ -64,12 +76,50 @@
 	background: transparent;
 	height: 25px;
 }
+
+#genre_sub{
+	display:none;
+	height: 115px;
+	width:70px;
+	padding:0;
+	margin: 0px;
+	position: absolute;
+	z-index:2;
+	list-style-type:none;
+	text-decoration:none;
+	background-color: #fff;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+
+.left_menu:hover ul#genre_sub {
+	display:block;
+}
+
+.top_text3{
+	text-decoration:none;
+	color:#555;
+	font-size:15px;
+	vertical-align: 8px;
+}
+
+.left_inner_menu{
+	padding: 10px 0 0 5px ;
+}
+
+.left_inner_menu:hover {
+	background: lightblue;
+}
+
+
+
+
 #login_box{
 	border : 1px solid lightgray;
 	width: 300px;
 	height: 300px;
-	margin-top: 150px;
-	margin-left: 600px;
+	margin: 200px auto;
 }
 
 h3, p{
@@ -125,6 +175,12 @@ p {
 </head>
 
 <body>
+
+<div id="site_layout">
+
+	<!--movieCri-->
+	<!-- 상단 메뉴-->
+
    <div id="top_menu_wrapper">
 	<div id="top_menu">
 
@@ -136,6 +192,13 @@ p {
 		</li>
 		<li class="left_menu">
 			<a href="#" class="top_text1">Genre</a>
+				
+				<ul id="genre_sub">
+					<li class="left_inner_menu"><a href="# "class="top_text3">Action</a></li>
+					<li class="left_inner_menu"><a href="#" class="top_text3">Comedy</a></li>
+					<li class="left_inner_menu"><a href="#" class="top_text3">Drama</a></li>
+				</ul>
+				
 		</li>
 		<li class="left_menu">
 			<a href="#" class="top_text1">Release Schedule</a>
@@ -163,7 +226,8 @@ p {
 
 	</div>
    </div>
-	<!-- ìë¨ ë©ë´ ë-->
+	<!-- 상단 메뉴 끝-->
+
 <section id="login_box">
 <h3> LOG IN TO OPENCRITIC </h3>
 <p>Continue with Facebook</p>

@@ -1,9 +1,7 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
 <head>
 
-<title>OpenCritic</title>
 <style>
 
 #site_layout{
@@ -114,68 +112,38 @@
 	background: lightblue;
 }
 
+#main_setting_area{
+	margin: 70px 700px 100px;
+	border: 1px solid white;
+	font-size: 13px;
 
-#login_box{
-	border : 1px solid lightgray;
-	width: 300px;
-	height: 450px;
-	margin: 200px auto;
 }
 
-h3, p{
-	text-align:center;
+.main_inner_area{
+	border-bottom: 1px solid #aaa;
+	padding:30px 7px;
+	height: 80px;
+	padding-left:15px;
 }
 
-p {
-	background: darkblue;
-	color: white;
-	width: 250px;
-	margin: 0 auto;
+.content_left_area{
+	float:left;
+	padding-left: 5px;
+	width: 80px;
 }
 
-#or{
-	text-align:center;
-	margin: 5px 0 5px;
-}
-
-div[id*=_box]{
-	margin-left: 25px;
-	margin-top: 5px;
+.content_right_area{
+	float:left;
+	padding-left: 25px;
 	
 }
 
-.login{
-	width: 250px;
-	height: 25px;
-	border-radius: 5px;
-	border : 1px solid gray;
-}
-
-#forgot{
-	text-align:center;
-	margin-top:10px;
-}
-
-#create_account_btn{
-	text-align:center;
-	background:black;
-	color:white;
-	width:270px;
-	height:30px;
-	margin: 25px auto;
-	padding-top: 3px;
-}
-
-#foot{
-	text-align:center;
-	font-size:12px;
-}
-
-
 </style>
+
 </head>
 
 <body>
+
 
 <div id="site_layout">
 
@@ -229,44 +197,61 @@ div[id*=_box]{
    </div>
 	<!-- 상단 메뉴 끝-->
 
-<section id="login_box">
 
-	<h3> CREATE AN ACCOUNT </h3>
+<div id="main_setting_area">
 
-	<p>Continue with Facebook</p>
+	<h3>ACCOUNT SETTINGS</h3>
 
-	<div id="or"><span>or</span></div>
+	<div class="main_inner_area">
+		<div class="content_left_area">PROFILE IMAGE</div>
 
+		<div class="content_right_area"><img src="C:\Users\orc4g\Desktop\image\profile.png"></div>
 
-	<div id="nickname_box">
-		<input type="text" placeholder=" Nickname" class="login">
+		<div class="content_right_area"><input type="button" value="파일 선택"></div>
 	</div>
 
+	<div class="main_inner_area">
+		<div class="content_left_area">NICKNAME</div>
 
-	<div id="id_box">
-		<input type="text" placeholder=" ID" class="login">
+		<div class="content_right_area"> <input type="text" placeholder="now"> </div>
 	</div>
+
+	<div class="main_inner_area">
+		<div class="content_left_area">ID</div>
+
+		<div class="content_right_area"> current_id </div>
+	</div>
+
+	<div class="main_inner_area">
+		<div class="content_left_area">PW</div>
 	
-	<div id="pw_box">
-		<input type="password" placeholder=" Password" class="login">
+		<div class="content_right_area">
+			<div><input type="password" placeholder="current password"></div>
+			<div><input type="password" placeholder="new password"></div>
+			<div><input type="password" placeholder="verify password"></div>
+		</div>
 	</div>
 
-	<div id="email_box">
-		<input type="text" placeholder=" Email" class="login">
-	</div>
-	
-	<div id="phone_number_box">
-		<input type="text" placeholder=" Phone Number" class="login">
+	<div class="main_inner_area">
+		<div class="content_left_area">EMAIL</div>
+
+		<div class="content_right_area"> current email </div>
 	</div>
 
+	<div class="main_inner_area">
+		<div class="content_left_area">PHONE</div>
+
+		<div class="content_right_area"> current phone </div>
+	</div>
 
 
-	<article id="create_account_btn">Create Account</article>
+</div>
 
-	<div id="foot"><span>By clicking Register, you indicate that you have read and understand our Privacy Policy and Terms of Use and represent that you are at least 13 years of age.</span></div>
+<!--main_setting.. 끝-->
 
-</section>
-
+</div>
+<!--site_layout 끝-->
 
 </body>
+
 </html>

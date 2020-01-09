@@ -78,6 +78,43 @@
 	height: 25px;
 }
 
+#genre_sub{
+	display:none;
+	height: 115px;
+	width:70px;
+	padding:0;
+	margin: 0px;
+	position: absolute;
+	z-index:2;
+	list-style-type:none;
+	text-decoration:none;
+	background-color: #fff;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+
+
+.left_menu:hover ul#genre_sub {
+	display:block;
+}
+
+.top_text3{
+	text-decoration:none;
+	color:#555;
+	font-size:15px;
+	vertical-align: 8px;
+}
+
+.left_inner_menu{
+	padding: 10px 0 0 5px ;
+}
+
+.left_inner_menu:hover {
+	background: lightblue;
+}
+
+
+
 
 #posters{
 	display:flex;
@@ -105,7 +142,16 @@ section[id^=board]{
 	border-bottom: 2px solid lightgray;
 }
 
+
 </style>
+
+<script>
+
+
+
+
+</script>
+
 </head>
 <body>
 
@@ -125,6 +171,13 @@ section[id^=board]{
 		</li>
 		<li class="left_menu">
 			<a href="#" class="top_text1">Genre</a>
+				
+				<ul id="genre_sub">
+					<li class="left_inner_menu"><a href="# "class="top_text3">Action</a></li>
+					<li class="left_inner_menu"><a href="#" class="top_text3">Comedy</a></li>
+					<li class="left_inner_menu"><a href="#" class="top_text3">Drama</a></li>
+				</ul>
+				
 		</li>
 		<li class="left_menu">
 			<a href="#" class="top_text1">Release Schedule</a>
@@ -143,10 +196,10 @@ section[id^=board]{
 			</div>
 		
 			<div id="login" class="right_menu">
-				<a href="login.jsp" class="top_text2">Login</a>
+				<a href="login" class="top_text2">Login</a>
 			</div>
 			<div id="sign_up" class="right_menu">
-				<a href="#" class="top_text2">Sign Up</a>
+				<a href="member_join" class="top_text2">Sign Up</a>
 			</div>
 		</nav>
 
